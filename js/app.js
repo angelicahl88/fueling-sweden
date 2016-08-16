@@ -230,7 +230,10 @@ var map = new mapboxgl.Map({
     center: [14.993038200627012, 54.775893640702776],
     zoom: 2.68,
     minZoom: 2.68,
-    maxZoom: 6.36
+    maxZoom: 6.36,
+    attributionControl: {
+      position: 'top-left'
+    }
 });
 
 var bounds = [
@@ -297,7 +300,7 @@ function renderMap() {
         var legendPostion = getLegendPosition(features[0].properties[currentLayer]);
         var newCss = 'bottom:' + legendPostion + '%';
         hoverValue.style.cssText = newCss;
-        
+
         hoverValue.innerHTML = '<h5 class="hoverName">' + features[0].properties.KOMMUN + '</h5>';
         hoverValue.innerHTML += '<h5 class="hoverPercent">' + formatPercent(features[0].properties[currentLayer]) + '</h5>';
         hoverValue.classList.add('active');
