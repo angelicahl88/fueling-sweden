@@ -44,6 +44,12 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+  
+body {
+   overflow: hidden;
+   position: fixed;
+   height: 100%;
+   width: 100%; }
 
 body {
   overflow: hidden;
